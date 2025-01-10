@@ -1,0 +1,13 @@
+langchain-openai
+langchain-google-genai
+langchain-google-vertexai
+langchain_community
+langchain==0.3.13
+langchain-chroma>=0.1.2
+python-dotenv==1.0.1
+jupyterlab==4.3.4
+pydantic==2.9.0
+scrapy
+newspaper3k
+lxml_html_clean
+chromadb
