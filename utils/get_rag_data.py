@@ -1,5 +1,6 @@
 import os
 import sys
+import json
 from newspaper import Article
 path_this = os.path.dirname(os.path.abspath(__file__))
 
@@ -30,11 +31,17 @@ urls = [
         'https://www.kompas.com/tren/read/2025/01/06/150000265/media-asing-soroti-makan-bergizi-gratis-singgung-stunting-dan-skema'
     ]
 
+data = [] 
 for u in urls:
     article = Article(u)
     article.download()
     article.parse()
 
-    with open(os.path.join(path_this, f'../data/rag/{article.title}.txt'), 'w') as f_:
-        print(f"Writing {article.title}")
-        f_.write(article.text)
+    data.append({
+        'title': article.title,
+        'content': article.text,
+        'url': u
+    })
+
+with open(os.path.join(path_this, '../data/rag/data.json'), 'w') as f_:
+    json.dump(data, f_, indent=2)
