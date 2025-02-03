@@ -12,3 +12,5 @@ scrapy
 newspaper3k
 lxml_html_clean
 chromadb
+vllm
+tokenizers==0.20.3
