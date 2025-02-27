@@ -1,6 +1,7 @@
 langchain-openai
 langchain-google-genai
 langchain-google-vertexai
+langchain-groq
 langchain_community
 langchain==0.3.13
 langgraph== 0.2.62
