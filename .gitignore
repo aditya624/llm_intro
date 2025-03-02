@@ -173,3 +173,7 @@ data/
 model/
 
 *.sql
+
+chromadb/
+sample.env
+.DS_Store
